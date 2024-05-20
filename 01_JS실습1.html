@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head><!-- 웹 설정 meta title css script style -->
+        <meta charset="utf-8">
+        <title>01_JS실습</title>
+    </head>
+    <body>
+        <h1>밝은 테마 / 어두운 테마로 변경하기</h1>
+        <button onclick="어두운모드()">다크모드</button>
+        <button onclick="밝은모드()">라이트모드</button>
+        <script>
+           const 바디 = document.querySelector("body");
+            function 어두운모드() {
+                바디.style.color="white";
+                바디.style.backgroundColor="black";
+            }
+            function 밝은모드() {
+                바디.style.color="black";
+                바디.style.backgroundColor="white";
+            }
+        </script>
+        <pre>
+    가나다라마바사
+        </pre>
+    </body>
+
+</html>
