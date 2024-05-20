@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>입출금계좌</title>
+        <style>
+            .account, .account * {
+                margin: 0;
+                padding: 0;
+            }
+            .account {
+                border: 5px solid gray;/* 테두리 표현 */
+                border-radius: 20px;/* 테두리 둥글게 */
+                padding: 10px 50px;/* 상하 10px, 좌우 50px 간격 */
+                width: 500px;/* 넓이 500px */
+                margin: 100px auto;/* 상하로 100px 간격 준 것 */
+            }
+            .row {
+                display: flex;
+                margin: 20px 0;
+                padding: 20px 0;
+            }
+            button {
+                margin: 0 30px;
+                border: 5px solid black;
+                    /*
+                    테두리 색을 black으로 지정했지만 밑에서 green으로 지정해서 
+                    green으로 나옴
+                    */
+                background-color: white;
+                font-size: 30px;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+            .입금버튼꾸미기 {
+                border-color: green;/* 테두리 색상 */
+                color: green;/* 글자 색 */
+            }
+            .출금버튼꾸미기 {
+                border-color: red;/* 테두리 색상 */
+                color: red;/* 글자 색 */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>입출금하기</h1>
+        <hr>
+        <div class="account">
+            <div class="row">
+                <h1>잔액 : <span id="output"></span>원</h1>
+            </div>
+            <div class="row">
+                <label>금액 : </label>
+                <input type="text" id="amount">
+                <span>원</span>
+            </div>
+            <div class="row">
+                <button class="입금버튼꾸미기" onclick="입금버튼()">입금하기</button>
+                <button class="출금버튼꾸미기" onclick="출금버튼()">출금하기</button>
+            </div>
+            <script>
+                let 잔액 = 0;//처음 잔액 설정
+                    //값이 변해야 하므로 let으로 설정해줌
+                //입금하기
+                function 입금버튼() {
+                    /*
+                    ★ 문제 발생
+                    const 얼마 = document.getElementById("amount").value;
+                    =====
+                    ★ 해결방안
+                    숫자가 아니라 문자로 인식할 때는 문자 -> 숫자로 변경해줌
+                    parseInt 문자 -> 숫자로 변경
+                    */
+                    const 입금액 = parseInt(document.getElementById("amount").value);
+                    //입금액이 숫자가 아니거나, 입금액이 음수일 때
+                    if (isNaN(입금액) || 입금액 < 0) {
+                        alert("올바른 금액을 입력하세요.")
+                    } else {//입금액이 숫자이고, 입금금액이 양수 일 때
+                        잔액 += 입금액;
+                        document.getElementById("output").innerText = 잔액;
+                    }
+                }
+
+                //출금하기
+                function 출금버튼() {
+                    const 출금액 = parseInt(document.getElementById("amount").value);
+
+                    //출금액이 숫자가 아니거나, 출금액이 음수일 때
+                    if (isNaN(출금액) || 출금액 < 0 ) {
+                        alert("올바른 금액을 입력하세요.")
+                    } else {//출금액이 숫자이고, 출금금액이 양수 일 때
+                        //돈을 출금하기 전에 잔액이 부족하지는 않은지 확인
+                        if (잔액 >= 출금액){
+                            잔액 -= 출금액;
+                            document.getElementById("output").innerText = 잔액;
+                        } else {
+                            alert("잔액이 부족합니다.")
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>
