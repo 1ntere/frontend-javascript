@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>실습 1 : 테마 변경하기</title>
+    </head>
+    <body>
+        <h1>테마 변경</h1>
+        <button onclick="밝은모드()">밝은 모드</button>
+        <button onclick="어두운모드()">어두운 모드</button>
+        <button onclick="분홍모드()">분홍 모드</button>
+        <button onclick="초록모드()">초록 모드</button>
+        <script>
+            //자료형 var(variable, 오래된 버전) let(최신버전 변수) const(최신버전 상수)
+            //document = html문서 안에서 선택하기
+            //ID="변수명"을 가지고 올 때는 getElementById("변수명")
+            //querySelector -> 특정한 class나 id가 없을 때 선택하겠다. body태그를
+            const body = document.querySelector("body");
+            //밝은모드 기능 만들기
+            function 밝은모드() {
+                body.style.color="black";//body태그 안의 style에서 글자색을 검정으로 변경
+                body.style.backgroundColor="white";
+            }
+            //어두운모드 기능 만들기
+            function 어두운모드() {
+                body.style.color="white";
+                body.style.backgroundColor="black";
+            }
+            //분홍모드 기능 만들기
+            function 분홍모드() {
+                body.style.color="lightpink";
+                body.style.backgroundColor="lightsteelblue";
+            }
+            //초록모드 기능 만들기
+            function 초록모드() {
+                body.style.color="yellowgreen";
+                body.style.backgroundColor="lightgreen";
+            }
+            /*
+            js는 오타나 철자 문제가 있을 때
+            오류를 일으키면서 실행을 멈추는 것이 아니라
+            만약 색상을 바꾸려고 했는데 오타가 나서 색상이 바뀌지 않는다면
+            style로 기본 색상인 검정을 가져오거나 그 전에 사용한 색상을 가지고 와서 활용
+            */
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>실습 2</title>
+    </head>
+    <body>
+        <h1 id="글자">클릭해서 환영인사로 변경하세요.</h1>
+        <br>
+        <button onclick="텍스트변경()">Click me</button>
+        <script>
+            //텍스트변경 기능 만들기
+            //자바          public void 메서드명() {}
+            //자바스크립트  function 기능명() {}
+            const 환영인사 = "Hello, World!"
+            
+            function 텍스트변경() {
+                //inner = 내부, 내면의
+                //innerText = 태그 안에 있는 글자들
+                document.getElementById("글자").innerText = 환영인사;
+                    //html 문서에서 "글자"라는 id를 가진 태그 안에 있는 글자들을 바꿔준다는 의미
+            }
+        </script>
+    </body>
+</html>

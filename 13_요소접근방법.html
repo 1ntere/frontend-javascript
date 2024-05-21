@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="urf-8">
+        <title>요소접근방법</title>
+    </head>
+    <body>
+        <h1>요소 접근 방법</h1>
+        <h3>DOM(Document Object Model)</h3>
+        <pre>
+    웹 문서(html)의 모든 태그를 객체 형식으로 표현한 것
+    (html 태그(body, h1, h2,,, pre, span 등)을 javaScript에서는 객체라고 표현)
+
+    ex. body 태그 = 자바스크립트에서 body 객체
+        html 문서 내에서 특정 태그에 접근 가능
+        document.getElementById("id값");을 이용해서
+            특정 태그에 접근해서 속성 값을 새로 만들거나 변경하거나 가져올 수 있음
+            id값으로 지정한 태그의 정보를 가져온다는 의미
+        
+        </pre>
+        <hr>
+
+        <h1>DOM을 이용한 태그 접근하기</h1>
+        <pre>
+    1. id로 접근하기 : document.getElementById("id값");
+        id가 일치하는 태그를 가져옴
+    2. class로 접근하기 : document.getElementByClassName("class값");
+        class가 일치하는 태그를 가져옴
+        class가 일치하는 태그가 많을 경우(1개가 아닌 경우)
+            모두 가져와서 배열 형태로 저장한다음 전달
+    3. name으로 접근하기 : document.getElementByName("name값");
+        name이 일치하는 태그를 가져옴
+        
+        </pre>
+        
+
+    </body>
+</html>
