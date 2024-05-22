@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>키 입력 확인</title>
-    </head>
-    <body>
-        <h1>키 입력 확인</h1>
-        <div class="container">
-            <div id="key-box"></div>
-                <div class="key">Q</div>
-                <div class="key">W</div>
-                <div class="key">E</div>
-                <div class="key">R</div>
-        </div>
-        <script>
             //화면에 존재하는 키 모두 가져오기
                 //                               (.key) == (class="key")
                 //                               문서에 존재하는 .(class)key를 모두 가져옴
-            const 키들 = document.querySelectorAll(".key");
+                const 키들 = document.querySelectorAll(".key");
                 
                 //document(문서, 화면 전체)
                 //                  keydown = 키보드에서 키가 눌리는 것
@@ -68,6 +52,3 @@
                 키들[숫자값저장].style.background = "white";
                 키들[숫자값저장].style.color = "black";
             });
-        </script>
-    </body>
-</html>

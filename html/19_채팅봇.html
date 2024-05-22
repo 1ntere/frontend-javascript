@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <link>
+        <meta charset="utf-8">
+        <title>채팅봇</title>
+        <link rel="style" href="../css/19_채팅봇.css"></link>
+    </head>
+    <body>
+        <h1>채팅봇 프로그램</h1>
+        <button id="toggle-button" onclick="togglechat()">채팅시작하기</button>
+        <div id="chat-container"  style="display: none;">
+            <div id="chat-box"></div>
+            <div id="input-box">
+                <input type="text" id="user-input" placeholder="메세지를 입력하세요...">
+                <button onclick="sendMessage()">보내기</button>
+            </div>
+        </div>
+        <script src="../js/19_채팅봇.js"></script>
+    </body>
+</html>
