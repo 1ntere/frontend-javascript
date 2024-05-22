@@ -1,5 +1,3 @@
-
-
 function btn1() {
     const input1 = document.getElementById("input1");
     const value = input1.value;
