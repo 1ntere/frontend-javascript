@@ -96,12 +96,12 @@
                 /*아이디 정규식 검사*/
                 const 아이디정규식 = /^[A-Za-z0-9]{6,16}$/;
                 if (아이디정규식.test(value)) {
-                    span.textContent = "유효한 이름의 형식입니다.";
+                    span.textContent = "유효한 아이디의 형식입니다.";
                     span.classList.add("check");
                     span.classList.remove("error");
                     checkList["inputId"] = true;
                 } else {
-                    span.textContent = "유효하지 않은 이름의 형식입니다.";
+                    span.textContent = "유효하지 않은 아이디의 형식입니다.";
                     span.classList.add("error");
                     span.classList.remove("check");
                     checkList["inputId"] = false;
