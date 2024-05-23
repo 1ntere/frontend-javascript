@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery 개요</title>
+    </head>
+    <body>
+        <pre>
+    자바스크립트 언어를 간편하게 사용할 수 있도록 단순화 시킨
+    오픈소스 기반의 자바스크립트 라이브러리
+
+    사용방법
+    1. 다운로드 : jQuery 홈페이지에서 다운로드
+        <a href="https://jquery.com/">제이쿼리 다운로드하기</a>
+        <script src="파일이위치한경로/파일이름"></script>
+        <script src="jquery.3.7.1.js"></script>
+        
+    2. CDN(주소참조활용) : Content Delivery Network (인터넷에서 컨텐츠를 가지고 옴)
+        <script src="http://code.jquery.com/jquery-버전.js"></script>
+        <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+
+    [기본문법]
+    1. id 문법
+        $(document).ready(function(){//문서에서 어떤 행동을 할 준비를 함
+            $("#아이디이름").click(function(){//id로 아이디이름을 가진 태그를 클릭했을 때 실행할 동작
+                동작에 관련된 코드 작성;
+            })
+        })
+
+    2. 이벤트리스너 문법(onclick, keyon, onchange, keydown, ...)
+        function 이벤트리스너에작성한이름() {
+            $("#아이디명").기능작성();
+        }
+    
+    [선택자문법]
+    1. css
+        $("태그명 또는 #아이디명 또는 .클래스명").css("배경", 색상);
+    
+    2.toggle
+        $("태그명 또는 #아이디명 또는 .클래스명").toggle("속도조절");//속도생략가능
+    
+    3. slideToggle
+        토글과 비슷하나 주로 이미지를 보이고 숨길 때 사용
+    
+    4. hide() / show()
+        보이기  숨기기
+    
+    5. append()
+        태그나 값을 추가할 때 사용
+        </pre>
+    </body>
+</html>
