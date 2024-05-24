@@ -18,8 +18,7 @@
                 text-decoration: none;
             }
             .footer a:hover {
-                /*footer의 a태그에 마우스를 올리면 실행할 코드 작성*/
-                text-decoration: underline;/*밑에 줄이 생김*/
+                text-decoration: underline;
             }
         </style>
     </head>
@@ -28,7 +27,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <a class="navbar-brand" href="#">브랜드 명</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span><!--나중에 네비게이션바 아이콘 위치-->
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -45,61 +44,48 @@
             </div>
         </nav>
 
-        <div class="container">
-            <div class="row mt-5">
-                        <!--mt-5 : 해당 줄(row)위에 margin으로 3rem (=48px)을 줌-->
-                <h1>이미지 갤러리</h1>
+        <div class="container mt-5">
+            <h2>게시판</h2>
+            <div class="mb-3 d-flex justify-content-end">
+                         <!--d-flex : flex 컨테이너로 만들어줌-->
+                                <!--justify-content-end : 컨텐츠를 오른쪽 정렬-->
+                <button class="btn btn-primary">새 글 작성</button>
             </div>
-            <!--1번째줄 힐링이 소개-->
-            <div class="row mt-5">
-                <div class="col-4">
-                    <img src="healing.jpg" class="img-fluid img-thumbnail">
-                </div>
-                <div class="col-8">
-                    <h3>힐링이</h3>
-                    <p>
-                        중성<br>
-                        좋아하는 것 : 츄르
-                    </p>
-                </div>
-            </div>
-            <!--2번째줄 호감이 소개-->
-            <div class="row mt-5">
-                <div class="col-4">
-                </div>
-                <div class="col-4">
-                    <h3>호감이</h3>
-                    <p>
-                        래브라도 리트리버<br>
-                        싫어하는 것 : 물
-                    </p>
-                </div>
-                <div class="col-4">
-                    <img src="hogam.jpg" class="img-fluid img-thumbnail">
-                </div>
-            </div>
-            <!--3번째줄 말리 소개-->
-            <div class="row mt-5">
-                <div class="col-3">
-                    <img src="marley.jpg" class="img-fluid rounded-circle">
-                </div>
-                <div class="col-3">
-                    <h3>말리</h3>
-                    <p>
-                        생일 : 5월 23일<br>
-                        좋아하는 것 : 산책
-                    </p>
-                </div>
-                <div class="col-2">
-                    <img src="lovelyMarley.jpg" class="img-fluid rounded-pill">
-                </div>
-                <div class="col-2">
-                    <img src="pajamaMarley.jpg" class="img-fluid rounded">
-                </div>
-                <div class="col-2">
-                    <img src="swimmingPartyMarley.jpg" class="img-fluid">
-                </div>
-            </div>
+            <table class="table table-striped">
+                            <!--table-striped : 테이블의 짝수 행과 홀수 행에 다른 배경색을 적용해서
+                                                행(가로) 구분을 시각적으로 편하게 구분할 수 있도록 적용-->
+                <thead>
+                <!--thead : table(표) 의 head-->
+                    <tr>
+                        <th>#</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!--tbody : table(표) 의 body-->
+                    <tr>
+                        <th>1</th>
+                        <td>첫 번째 게시글</td>
+                        <td>홍길동</td>
+                        <td>2024-05-01</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>두 번째 게시글</td>
+                        <td>김철수</td>
+                        <td>2024-05-02</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>세 번째 게시글</td>
+                        <td>오영희</td>
+                        <td>2024-05-03</td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
 
         <!--푸터-->
