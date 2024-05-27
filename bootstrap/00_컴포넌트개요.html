@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>컴포넌트 개요</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>컴포넌트 정리하기</h1>
+        <pre>
+    컴포넌트는 특정 기능이나 기능 집합을 의미
+    독립적으로 설계된 기능, 재사용이 가능한 모듈 또는 단위
+    객체, 기능, 메서드 등
+        </pre>
+
+        <h3>Button태그</h3>
+        <pre>
+    클릭 가능한 버튼을 생성
+    부트스트랩으로 버튼을 시작할 때
+    class 내부에 btn 버튼 시작 기능을 작성해주고
+    추가로 작성하고 싶은 스타일을 적용
+
+    btn-primary : 파란색
+        </pre>
+        <button type="button" class="btn btn-primary">버튼</button>
+        <button type="button" class="btn btn-secondary">버튼</button>
+        <button type="button" class="btn btn-success">버튼</button>
+        <button type="button" class="btn btn-danger">버튼</button>
+        <button type="button" class="btn btn-warning">버튼</button>
+        <button type="button" class="btn btn-info">버튼</button>
+        <button type="button" class="btn btn-light">버튼</button>
+        <button type="button" class="btn btn-dark">버튼</button>
+        <button type="button" class="btn btn-link">버튼</button>
+
+        <pre>
+    input태그에서 버튼 기능을 사용하길 원한다면 아래와 같이 사용
+        </pre>
+        
+        <input class="btn btn-primary" type="button" value="인풋버튼"><br>
+        <!--
+        잘못된 코드
+        <input class="btn btn-primary" type="button">인풋버튼<br>
+        -->
+
+        <pre>
+    a 태그를 버튼처럼 사용하길 원한다면 아래와 같이 사용
+        </pre>
+        <a class="btn btn-primary" href="#">a태그버튼</a>
+
+        <h3>버튼 테두리 표시하기</h3>
+        <button type="button" class="btn btn-outline-primary">버튼</button>
+        <button type="button" class="btn btn-outline-secondary">버튼</button>
+        <button type="button" class="btn btn-outline-success">버튼</button>
+        <button type="button" class="btn btnv-danger">버튼</button>
+        <button type="button" class="btn btn-outline-warning">버튼</button>
+        <button type="button" class="btn btn-outline-info">버튼</button>
+        <button type="button" class="btn btn-outline-light">버튼</button>
+        <button type="button" class="btn btn-outline-dark">버튼</button>
+        <button type="button" class="btn btn-outline-link">버튼</button>
+
+        <h3>버튼 크기 조정</h3>
+        <pre>
+    버튼의 크기는 btn-lg 나 btn-sm 와 같은 크기 조정을 사용해서 적용
+    padding을 이용해서 버튼의 크기를 조정할 수 있음
+        </pre>
+
+
+        <h3>버튼 비활성화</h3>
+        <pre>
+    버튼을 비활성화 하기 위해서는 disabled를 추가하면 됨
+
+    하지만 a태그 버튼을 비활성화 하기 위해서는
+    disabled와 aria-disabled="true"를 같이 사용해주어야 함
+        </pre>
+        <button type="button" class="btn btn-primary disabled">버튼 비활성화</button>
+        <a class="btn btn-primary disabled" aria-disabled="true" href="#">a태그버튼 비활성화</a>
+
+
+        <br><br><br>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
